@@ -56,4 +56,7 @@ make -j$(nproc)
 echo "Installing Geant4..."
 make install
 
-echo "Geant4 installation completed successfully!"
+echo "1. Geant4 installation completed"
+echo "2. Add this to bashrc file source /media/roshan/Roshan/radha/G4/geant4-install/bin/geant4.sh"
+echo "3. Check using which geant4-config"
+echo "4. Proceed with running datasetG4.sh"
