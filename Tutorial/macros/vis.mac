@@ -1,0 +1,13 @@
+/run/initialize
+
+/vis/open OGL 600X600-0+0
+
+/vis/viewer/set/viewpointVector 111
+/vis/viewer/set/autoRefresh True
+
+/vis/drawVolume
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+/vis/scene/add/scale 10.0 cm
+/vis/scene/add/axes
+/vis/scene/add/eventID
