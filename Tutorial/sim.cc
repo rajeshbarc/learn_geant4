@@ -8,6 +8,8 @@
 
 #include "MyPhysicsList.hh"
 #include "MyDetectorConstruction.hh"
+#include "MyActionInitialization.hh"
+
 
 int main(int argc, char** argv){
 
@@ -21,9 +23,12 @@ int main(int argc, char** argv){
     runManager->SetUserInitialization(new MyPhysicsList);
     // Detector Construction
     runManager->SetUserInitialization(new MyDetectorConstruction);
+    // Action Initialization
+    runManager->SetUserInitialization(new MyActionInitialization);
     G4VisManager *visManager = new G4VisExecutive;
     visManager->Initialise();
-    G4UImanager * uiManagr = G4UImanager::GetUIpointer();
+    G4UImanager * uiManager = G4UImanager::GetUIpointer();
+    uiManager->ApplyCommand("/control/execute vis.mac");
     ui->SessionStart();
     return 1;
 }
